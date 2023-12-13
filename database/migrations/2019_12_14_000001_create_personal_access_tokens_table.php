@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('personal_access_tokens', function (Blueprint $table) {
             $table->id();
-            $table->morphs('tokenable');
+            $table->string('tokenable_type', 191);
+            $table->string('tokenable_id', 20);
             $table->string('name');
             $table->string('token', 64)->unique();
             $table->text('abilities')->nullable();
@@ -21,8 +22,13 @@ return new class extends Migration
             $table->timestamp('expires_at')->nullable();
             $table->timestamps();
         });
+
+        Schema::table('personal_access_tokens', function (Blueprint $table) {
+            $table->index(['tokenable_type', 'tokenable_id'], 'personal_access_tokens_tokenable_index');
+        });
     }
 
+    
     /**
      * Reverse the migrations.
      */
