@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template-->
     <link href="{{asset('backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
+    <link href="{{asset('backend/fontawesome/css/all.css')}}" rel="stylesheet">
 
 </head>
 
@@ -589,6 +590,8 @@
     <!-- Page level custom scripts -->
     <script src="{{asset('backend/js/demo/chart-area-demo.js')}}"></script>
     <script src="{{asset('backend/js/demo/chart-pie-demo.js')}}"></script>
+    {{-- fontawesome --}}
+    <script src="{{asset('backend/fontawesome/js/all.js')}}"></script>
 </body>
 
 </html>
