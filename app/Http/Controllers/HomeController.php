@@ -13,4 +13,34 @@ class HomeController extends Controller
     public function connecter() {
         return view("backend.pages.connecter");
     }
+
+    // error404
+    public function error404()
+    {
+        return view("backend.pages.error404");
+    }
+
+    // blank page
+    public function blankpage()
+    {
+        return view("backend.pages.blankpage");
+    }
+
+    // login page
+    public function loginpage()
+    {
+        return view("backend.pages.auth.loginpage");
+    }
+
+    // forgotpassword page
+    public function forgotpasswordpage()
+    {
+        return view("backend.pages.auth.forgotpasswordpage");
+    }
+
+    // register page
+    public function registerpage()
+    {
+        return view("backend.pages.auth.registerpage");
+    }
 }

@@ -73,6 +73,11 @@ php artisan make:model Article -m
 php artisan make:controller ArticleController -r
 php artisan make:request ArticleRequest
 
+<!-- Universities -->
+php artisan make:model University -m
+php artisan make:controller UniversityController -r
+php artisan make:request UniversityRequest
+
 
 111111111111111111111111111111
 

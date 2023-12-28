@@ -1,3 +1,35 @@
 .login input {
    box-shadow: 1px 1px 1px black;
 }
+
+body {
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+}
+
+.show-article img{
+   height: 70vh;
+   width: 100%;
+}
+
+#light-dark-mode .fa-moon::before {
+   content: "\f1bf"
+}
+
+
+/* Styles pour le mode jour */
+.light-mode {
+   /* Ajoutez vos styles pour le mode jour ici */
+   background-color: #ffffff;
+   /* Exemple de couleur de fond en mode jour */
+   color: #000000;
+   /* Exemple de couleur de texte en mode jour */
+}
+
+/* Styles pour le mode nuit */
+.dark-mode {
+   /* Ajoutez vos styles pour le mode nuit ici */
+   background-color: #1a1a1a;
+   /* Exemple de couleur de fond en mode nuit */
+   color: #ffffff;
+   /* Exemple de couleur de texte en mode nuit */
+}

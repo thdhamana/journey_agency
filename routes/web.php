@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UniversityController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +28,13 @@ Route::get('/admin', function () {
 Route::name('admin.')->group(function () {
     Route::get('home', [HomeController::class, 'index'])->name('home');
     Route::get('connecter', [HomeController::class, 'connecter'])->name('connecter');
-    Route::resource('article', ArticleController::class)->except('show');
+    Route::get('error404', [HomeController::class, 'error404'])->name('error404');
+    Route::get('blankpage', [HomeController::class, 'blankpage'])->name('blankpage');
+    Route::get('loginpage', [HomeController::class, 'loginpage'])->name('loginpage');
+    Route::get('registerpage', [HomeController::class, 'registerpage'])->name('registerpage');
+    Route::get('forgotpasswordpage', [HomeController::class, 'forgotpasswordpage'])->name('forgotpasswordpage');
+    Route::resource('article', ArticleController::class);
+    Route::resource('university', UniversityController::class);
 });
 
 

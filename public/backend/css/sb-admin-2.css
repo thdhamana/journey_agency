@@ -11266,9 +11266,21 @@ form.user .btn-user {
   animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
 
+#light-dark-mode .fa-moon::before {
+  content: "\f1bf"
+}
+
 footer.sticky-footer {
   padding: 2rem 0;
   flex-shrink: 0;
+  height: 70px;
+}
+
+.content {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out
 }
 
 footer.sticky-footer .copyright {
@@ -11279,3 +11291,4 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
+

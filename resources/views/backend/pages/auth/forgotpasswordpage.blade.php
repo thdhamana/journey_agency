@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('backend.home')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="{{asset('backend/css/app.min.css')}}" rel="stylesheet">
-    <link href="{{asset('backend/css/costom.css')}}" rel="stylesheet">
-    
-
-    <!-- Custom fonts for this template-->
-    <link href="{{asset('backend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
-    <!-- Custom styles for this template-->
-    <link href="{{asset('backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
-</head>
+@section('content')
 
 <body class="bg-gradient-primary">
 
@@ -78,5 +65,4 @@
     </div>
 
 </body>
-
-</html>
+@endsection

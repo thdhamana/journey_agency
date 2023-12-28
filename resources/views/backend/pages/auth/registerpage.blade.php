@@ -1,27 +1,9 @@
- <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+@extends('backend.home')
 
-    <!-- Custom fonts for this template-->
-    <link href="{{asset('backend/fontawesome/css/all.css')}}" rel="stylesheet">
-    <!-- Custom styles for this template-->
-    <link href="{{asset('backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
-    
-    <link href="{{asset('backend/css/app.min.css')}}" rel="stylesheet">
-    <link href="{{asset('backend/css/costom.css')}}" rel="stylesheet">
+@section('content')
 
-    {{-- js --}}
-    <script src="{{asset('backend/fontawesome/js/all.js')}}"></script>
-
-</head>
-
-<body class="bg-gradient-primary">
-    
-     <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content-wrapper" class="d-flex flex-column">
         <!-- Main Content -->
         <div id="content">
 
@@ -77,7 +59,7 @@
                                                 {{-- bouton --}}
                                                 <div class="row mt-3">
                                                     <div class="col-md-6 col-lg-6 col-sm-12">
-                                                        <a class="underline text-primary fw-bold flex-wrap text-sm hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
+                                                        <a class="underline text-primary fw-bold flex-wrap text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                                                             {{ __('Already registered ??') }}
                                                         </a>
                                                     </div>
@@ -114,7 +96,5 @@
             </div>
         </div>
     </div>
-  
-</body>
-
-</html>
+    
+@endsection
