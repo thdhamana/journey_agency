@@ -1,10 +1,16 @@
-<section>
+<section class="col-10 m-auto">
     <header>
-        <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Profile Information') }}
-        </h2>
-
-        <p class="mt-1 text-sm text-gray-600">
+        <div class="row">
+            <div class="col-6">
+                 <h2 class="text-lg font-medium text-gray-900 fs-2">
+                    {{ __('Profile Information') }}
+                </h2>
+            </div>
+            <div class="col-6 text-end">
+                <a class="btn btn-secondary" href="{{route('dashboard')}}">Return to Dashboard <i class="fa fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+        <p class="mt-1 text-sm text-gray-600 fs-5">
             {{ __("Update your account's profile information and email address.") }}
         </p>
     </header>
@@ -19,13 +25,13 @@
 
         <div>
             <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
+            <x-text-input id="name" name="name" type="text" class="form-control w-full my-2" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
 
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
+            <x-text-input id="email" name="email" type="email" class="form-control w-full my-2" :value="old('email', $user->email)" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
@@ -48,8 +54,11 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
-
+            <div class="row m-auto">
+                <x-primary-button class="fs-5 justify-center rounded mt-1 p-0">
+                    {{ __('Save') }}
+                </x-primary-button>
+            </div>
             @if (session('status') === 'profile-updated')
                 <p
                     x-data="{ show: true }"

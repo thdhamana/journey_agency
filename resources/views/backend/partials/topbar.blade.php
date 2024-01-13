@@ -174,33 +174,27 @@
                 </div>
 
                 <!-- item-->
-                <a href="pages-profile.html" class="dropdown-item">
+                <a href="{{route('admin.account')}}" class="dropdown-item">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     <span>My Account</span>
                 </a>
 
                 <!-- item-->
-                <a href="pages-faq.html" class="dropdown-item">
-                    <i class="fa-brands fa-cuttlefish fa-fw mr-2 text-gray-400"></i>
-                    <span>Support</span>
-                </a>
-
-                <!-- item-->
-                <a href="auth-lock-screen.html" class="dropdown-item">
+                <a href="{{route('admin.lockscreen')}}" class="dropdown-item">
                     <i class="fas fa-lock fs-18 align-middle text-gray-400 fa-fw mr-2"></i>
                     <span>Lock Screen</span>
                 </a>
 
                 <!-- item-->
-                <a class="dropdown-item" href="{{route('profile.edit')}}">
-                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Profile
-                </a>
-
-                <!-- item-->
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{{route('admin.account')}}">
                     <i class="fa-solid fa-gear fa-fw mr-2 text-gray-400"></i>
                     Settings
+                </a>
+
+                 <!-- item-->
+                <a href="{{route('admin.support')}}" class="dropdown-item">
+                    <i class="fa-brands fa-cuttlefish fa-fw mr-2 text-gray-400"></i>
+                    <span>Support</span>
                 </a>
                 
                 <!-- item-->
@@ -219,8 +213,11 @@
 
 
 <!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
+<a class="scroll-to-top rounded bg-primary" href="#page-top">
+    <i class="fa-solid fa-arrow-up-long "></i>
+   {{-- <div class="d-flex flex-row g-0">
+        <i class="fa fa-arrow-down-long "></i>
+   </div> --}}
 </a>
 <!-- end to Top Button-->
 
@@ -229,26 +226,27 @@
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title fw-bolder" id="exampleModalLabel">Confirmation to logout here ??</h5>
-                <?php for ($i=0; $i < 5; $i++) { ?>
-                    <img width="30px" src="{{asset('backend/img/R.gif')}}" alt="" srcset="">
-                <?php }?>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <button class="close text-white " type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <p>Select "Logout" below if you are ready to end your current session.</p>
+            <div class="modal-body d-flex flex-column align-items-center p-3">
+                <div>
+                    <?php for ($i=0; $i < 5; $i++) { ?>
+                        <img width="30px" src="{{asset('backend/img/R.gif')}}" alt="" srcset="">
+                    <?php }?>
+                </div>
+                <p class="mt-2 p-0 ">Select "Logout" below if you are ready to end your current session.</p>
             </div>
             <div class="modal-footer d-flex justify-content-end">
-                <button class="btn btn-secondary mx-0" type="button" data-dismiss="modal">Cancels</button>
-                 <form method="POST" action="{{ route('logout') }}" >
+                <button class="btn btn-secondary " type="button" data-dismiss="modal">Cancel</button>
+                
+                <!-- Formulaire de suppression -->
+                <form method="POST" action="{{ route('logout') }}" >
                     @csrf
-
-                    <x-dropdown-link  onclick="event.preventDefault(); this.closest('form').submit();">
-                        <button class="btn btn-danger mx-0" type="button">Log Out</button>
-                    </x-dropdown-link>
+                    <button type="submit" class="btn btn-danger">Log Out</button>
                 </form>
             </div>
         </div>

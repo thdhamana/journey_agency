@@ -136,6 +136,7 @@ si on deja connecter on va masquer le formulaire login aux utilisateurs
 pour cela il faut ajouter : 
 ---sur la route de connection ->middlecware('guest') pour dire qu'il est connecter et 
 ---sur la route de deconnection ->middlecware('auth') pour dire qu'il n'a qu'a ce connecter
+
 ---pour gerer les images afin qu'ils soient sotocker dans le docier public
 php artisan storage:link
 

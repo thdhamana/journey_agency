@@ -13,7 +13,7 @@
                         <div class="card">
                             <div class="card-body p-5 shadow-lg">
                                 <div class="row d-flex flex-row gap-2">
-                                    <div class="col-lg-4 col-md-12 col-sm-12 text-center ">
+                                    <div class="col-lg-4 d-block col-md-12 col-sm-12 text-center ">
                                         <img width="300px" src="{{asset('backend/img/Lock.png')}}" alt="" srcset="">
                                     </div>
                                     <div class="col-lg-7 col-md-12 col-sm-12">

@@ -17,7 +17,7 @@ class UniversityController extends Controller
     public function index()
     {
         return view("backend.pages.universities.index", [
-            "universities"=> University::orderBy('created_at', 'desc')->paginate(10),
+            "universities"=> University::orderBy('created_at', 'desc')->paginate(20),
         ]);
     }
 

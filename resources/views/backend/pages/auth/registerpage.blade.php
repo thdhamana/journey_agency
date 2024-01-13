@@ -79,10 +79,10 @@
                                             <div class="text-center mt-4">
                                                 <p class="text-muted fs-16">Sign in with</p>
                                                 <div class="d-flex gap-2 justify-content-center mt-3">
-                                                    <a href="javascript: void(0);" class="btn btn-soft-primary"><i class="fa-brands fa-facebook-f"></i></a>
-                                                    <a href="javascript: void(0);" class="btn btn-soft-danger"><i class="fa-brands fa-google"></i></a>
-                                                    <a href="javascript: void(0);" class="btn btn-soft-info"><i class="fa-brands fa-twitter"></i></a>
-                                                    <a href="javascript: void(0);" class="btn btn-soft-dark"><i class="fa-brands fa-github"></i></a>
+                                                    <a href="javascript: void(0);" class="btn btn-soft-primary "><i class="fa-brands fa-facebook-f"></i></a>
+                                                    <a href="javascript: void(0);" class="btn btn-soft-danger "><i class="fa-brands fa-google"></i></a>
+                                                    <a href="javascript: void(0);" class="btn btn-soft-info "><i class="fa-brands fa-twitter"></i></a>
+                                                    <a href="javascript: void(0);" class="btn btn-soft-dark "><i class="fa-brands fa-github"></i></a>
                                                 </div>
                                             </div>
                                            

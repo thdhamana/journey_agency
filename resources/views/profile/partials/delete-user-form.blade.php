@@ -1,19 +1,27 @@
-<section class="space-y-6">
+<section class="space-y-6 col-10 m-auto">
     <header>
-        <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Delete Account') }}
-        </h2>
+        <div class="row">
+            <div class="col-6">
+                 <h2 class="text-lg font-medium text-gray-900 fs-2">
+                    {{ __('Delete Account') }}
+                </h2>
+            </div>
+            <div class="col-6 text-end">
+                <a class="btn btn-secondary" href="{{route('dashboard')}}">Return to Dashboard <i class="fa fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
 
-        <p class="mt-1 text-sm text-gray-600">
+        <p class="mt-1 text-sm text-gray-600 fs-5">
             {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
         </p>
     </header>
 
-    <x-danger-button
-        x-data=""
-        x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
-    >{{ __('Delete Account') }}</x-danger-button>
-
+     <div class="row m-auto">
+        <x-danger-button class="fs-5 justify-center rounded mt-1 p-0"
+            x-data=""
+            x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')">{{ __('Delete Account') }}
+        </x-danger-button>
+    </div>
     <x-modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
         <form method="post" action="{{ route('profile.destroy') }}" class="p-6">
             @csrf

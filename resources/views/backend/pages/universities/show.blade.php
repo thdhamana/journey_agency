@@ -14,7 +14,7 @@
                     <h6>Country : {{$university->country}} </h6>
                 </div>
             </div>
-            <div class="row show-article rounded-4 shadow img-fluid">
+            <div class="row show-university rounded-4 shadow img-fluid">
                 <img src="{{asset('storage/'.$university->photo)}} " alt="" srcset="">
             </div>
             <div class="row py-2 fw-bold text-primary">
@@ -30,6 +30,14 @@
             </div>
             <div class="row">
                 <p>{{$university->content }} </p>
+            </div>
+            <div class="row py-1 fw-bold text-primary">
+                <div class="col-6 text-start">
+                    <p>By {{ Auth::user()->name}} </p>
+                </div>
+                 <div class="col-6 text-end">
+                    <p>publish in {{$university->created_at}} </p>
+                </div>
             </div>
         </div>
     </div>

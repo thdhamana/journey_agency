@@ -43,4 +43,22 @@ class HomeController extends Controller
     {
         return view("backend.pages.auth.registerpage");
     }
+
+    // account page
+    public function account()
+    {
+        return view("backend.pages.infos.account");
+    }
+
+    // lockscreen page
+    public function lockscreen()
+    {
+        return view("backend.pages.infos.lockscreen");
+    }
+
+    // support page
+    public function support()
+    {
+        return view("backend.pages.infos.support");
+    }
 }

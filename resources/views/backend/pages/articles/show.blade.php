@@ -14,7 +14,7 @@
             </div>
             <div class="row p-1 fw-bold text-primary">
                 <div class="col-6 text-start">
-                    <p>By {{ Auth::user()->email}} </p>
+                    <p>By {{ Auth::user()->name}} </p>
                 </div>
                  <div class="col-6 text-end">
                     <p>publish in {{$article->created_at}} </p>

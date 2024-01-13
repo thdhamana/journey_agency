@@ -33,6 +33,12 @@ Route::name('admin.')->group(function () {
     Route::get('loginpage', [HomeController::class, 'loginpage'])->name('loginpage');
     Route::get('registerpage', [HomeController::class, 'registerpage'])->name('registerpage');
     Route::get('forgotpasswordpage', [HomeController::class, 'forgotpasswordpage'])->name('forgotpasswordpage');
+    Route::get('account', [HomeController::class, 'account'])->name('account');
+    Route::get('lockscreen', [HomeController::class, 'lockscreen'])->name('lockscreen');
+    Route::get('support', [HomeController::class, 'support'])->name('support');
+
+
+
     Route::resource('article', ArticleController::class);
     Route::resource('university', UniversityController::class);
 });

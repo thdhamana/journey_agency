@@ -19,16 +19,10 @@
     <link href="{{asset('backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
     <link href="{{asset('backend/css/sb-admin-2.css')}}" rel="stylesheet">
     <link href="{{asset('backend/fontawesome/css/all.css')}}" rel="stylesheet">
+  
+    {{-- pour les liens sociaux --}}
     <link href="{{asset('backend/css/app.min.css')}}" rel="stylesheet">
     <link href="{{asset('backend/css/costom.css')}}" rel="stylesheet">
-    
-
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <!-- Custom styles for this page -->
-    <link href="{{asset('backend/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
-
-
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
@@ -83,6 +77,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
     <!-- Bootstrap core JavaScript-->
@@ -100,37 +95,13 @@
     {{-- fontawesome --}}
     <script src="{{asset('backend/fontawesome/js/all.js')}}"></script>
 
-    {{-- 26/12/2023 --}}
-
-    <!-- Page level plugins -->
-    <script src="{{asset('backend/vendor/datatables/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('backend/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="{{asset('backend/js/demo/datatables-demo.js')}}"></script>
-
-
     {{-- app.min.js --}}
     <script src="{{asset('backend/js/app.mis.js')}}"></script>
-
-<script>
-    // JavaScript
-document.addEventListener('DOMContentLoaded', function() {
-    const lightDarkModeButton = document.getElementById('light-dark-mode');
-
-    lightDarkModeButton.addEventListener('click', function() {
-        const body = document.body;
-        if (body.classList.contains('light-mode')) {
-            body.classList.remove('light-mode');
-            body.classList.add('dark-mode');
-        } else {
-            body.classList.remove('dark-mode');
-            body.classList.add('light-mode');
-        }
-    });
-});
-
-</script>
+    {{-- custom.js --}}
+    <script src="{{asset('backend/js/custom.js')}}"></script>
+    
+    <!-- Vendor js -->
+    <script src="{{asset('backend/js/vendor.min.js')}}"></script>
 
 </body>
 
